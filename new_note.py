@@ -1,0 +1,30 @@
+import customtkinter
+from PIL import ImageTk,Image
+def new_note():
+    new_win=customtkinter.CTk()
+    new_win.resizable(False, False)
+    new_win.geometry("600x400")
+    new_win.title(' Add New Note ')
+    img2=ImageTk.PhotoImage(Image.open("pattern.png"))
+    l2=customtkinter.CTkLabel(master=new_win,image=img2)
+    l2.place(x=0,y=0)
+    textframe=customtkinter.CTkFrame(new_win,width=200,height=270)
+    textframe.pack(pady=50)
+    lb = customtkinter.CTkCheckBox(textframe,width=25,height=8,font=('Times', 18),fg_color='#464646',text="Task 1")
+    lb.place(x=10,y=10)
+    checkbox_1 = customtkinter.CTkCheckBox(textframe,width=25,height=8,font=('Times', 18),fg_color='#464646',text="Task 2")
+    checkbox_1.place(x=10,y=50)
+    checkbox_2 = customtkinter.CTkCheckBox(textframe,width=25,height=8,font=('Times', 18),fg_color='#464646',text="Task 3")
+    checkbox_2.place(x=10,y=90)
+    checkbox_3 = customtkinter.CTkCheckBox(textframe,width=25,height=8,font=('Times', 18),fg_color='#464646',text="Task 4")
+    checkbox_3.place(x=10,y=130)
+    def add():
+        new_checkbox = customtkinter.CTkCheckBox(textframe,width=25,height=8,font=('Times', 18),fg_color='#464646',text="Task 5")
+        new_checkbox.place(x=10,y=170)
+    but1=customtkinter.CTkButton(textframe,text="Add Task",command=add)
+    but1.place(x=20,y=210)
+    output_label=customtkinter.CTkLabel(master=new_win,text="Check your Tasks",width=100,height=30,corner_radius=8)
+    output_label.place(x=250,y=8)
+    new_win.mainloop()
+
+new_note()
