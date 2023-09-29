@@ -51,14 +51,18 @@ cd Notencrypt
 
 ### bash
 Copy code
+
 python notencrypt.py
+
 Usage
 #### Encrypt Text
 To encrypt text, run the following command:
 
 ### bash
 Copy code
+
 python notencrypt.py -e "Your text here" -k "Your encryption key"
+
 Replace "Your text here" with the text you want to encrypt and "Your encryption key" with your chosen encryption key.
 
 ### Decrypt Text
@@ -66,7 +70,9 @@ To decrypt previously encrypted text, run the following command:
 
 ### bash
 Copy code
+
 python notencrypt.py -d "Your encrypted text" -k "Your encryption key"
+
 Replace "Your encrypted text" with the text you want to decrypt and "Your encryption key" with the key used for encryption.
 
 ### Examples
@@ -76,12 +82,16 @@ Here are some examples of how to use Notencrypt:
 
 ## bash
 Copy code
+
 python notencrypt.py -e "Hello, World!" -k "mysecretkey"
+
 ###Decrypt text:
 
 ## bash
 Copy code
+
 python notencrypt.py -d "Encrypted text here" -k "mysecretkey"
+
 ###License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
